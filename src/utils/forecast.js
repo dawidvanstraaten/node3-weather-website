@@ -16,7 +16,12 @@ const forecast = (lat, long, callback) => {
           body.currently.temperature +
           " degress out. There is a " +
           body.currently.precipProbability +
-          "% chance of rain."
+          "% chance of rain." +
+          "The weather will have a minimum of " +
+          body.daily.data[0].temperatureMin +
+          "℃ and a maximum of " +
+          body.daily.data[0].temperatureMax +
+          "℃."
       );
     }
   });
